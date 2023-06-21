@@ -32,7 +32,7 @@ int main(void)
 
 	for (count = 1; count <= 98; count++)
 	{
-	if (f1a > 0)
+	if (f1o > 0)
 		printf("%lu", f1o);
 	initial = numLenght(mx) - 1 - numLenght(f1);
 
@@ -53,7 +53,7 @@ int main(void)
 	if (count != 98)
 		printf(", ");
 	else
-		prontf("\n");
+		printf("\n");
 	}
 	return (0);
 }
