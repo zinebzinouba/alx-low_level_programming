@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print__numbers - Entry point
+ * print_numbers - Entry point
  *
  * Return: Always 0 (Success)
  */
