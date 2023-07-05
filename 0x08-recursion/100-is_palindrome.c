@@ -8,7 +8,7 @@
  */
 int is_palindrome(char *s)
 {
-	int NbCaract  = _strlen_recursion(s);
+	int NbCaract  = _strlen_recursion(&s);
 
 	if (NbCaract <= 1)
 		return (1);
