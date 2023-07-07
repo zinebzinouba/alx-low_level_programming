@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  *
@@ -18,7 +19,7 @@ int main(int argc, char const *argv[])
 	{
 		int prod;
 
-		prod = argv[1] * argv[2];
+		prod = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", prod);
 		return (0);
 	}
