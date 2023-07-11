@@ -8,7 +8,7 @@
  *
  * Return: Always 0 (Success)
  */
-oid free_grid(int **grid, int height)
+void free_grid(int **grid, int height)
 {
 	int i = 0;
 
