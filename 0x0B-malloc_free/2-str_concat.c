@@ -1,5 +1,5 @@
 #include "main.h"
-#includ "stdlib.h>
+#include <stdlib.h>
 /**
  * lenght- Entry point
  *
