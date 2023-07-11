@@ -1,4 +1,5 @@
 #include "main.h"
+#includ "stdlib.h>
 /**
  * lenght- Entry point
  *
