@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * print_number- Entry point
+ * free_grid- Entry point
  *
  *@grid: check
- *@height
+ *@height: check
  *
  * Return: Always 0 (Success)
  */
