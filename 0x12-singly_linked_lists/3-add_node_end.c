@@ -1,53 +1,41 @@
 #include "lists.h"
-/**
- * _strlen - returns the lenght of a string
- * @s: pointer to s
- *
- * Return: 0 on success
- *
- */
-int _strlen(const char *s)
-{
-	int count = 0;
 
-	if (s != '\0')
-	{
-		while (*(s + count) != '\0')
-			count++;
-	}
-	return (count);
-}
 /**
- * add_node_end - check the code for Holberton School students.
- * @head: pointer to first node in linked list
- * @str: data to be copied to string field of the node
- * Return: the address of the new element, or NULL if it failed
+ * add_node_end - adds a new node at the end
+ * of a list_t list.
+ * @head: head of the linked list.
+ * @str: string to store in the list.
+ * Return: address of the head.
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
-	list_t *tail;
+	list_t *new, *temp;
+	size_t nchar;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
+
 	new->str = strdup(str);
-	new->len = _strlen(str);
+
+	for (nchar = 0; str[nchar]; nchar++)
+		;
+
+	new->len = nchar;
 	new->next = NULL;
-	if (*head == NULL)
+	temp = *head;
+
+	if (temp == NULL)
+	{
 		*head = new;
+	}
 	else
 	{
-		tail = *head;
-		while (1)
-		{
-			if (tail->next == NULL)
-			{
-				tail->next = new;
-				break;
-			}
-			tail = tail->next;
-		}
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
 	}
-	return (new);
+
+	return (*head);
 }
